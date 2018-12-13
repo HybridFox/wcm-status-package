@@ -1,0 +1,4 @@
+--timeout 2000
+--reporter mocha-multi --reporter-options spec=-,json=./test/output.json
+--exit
+./test/**/*.js

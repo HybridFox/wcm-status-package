@@ -1,0 +1,9 @@
+node_modules
+coverage
+test
+.nyc_output
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitignore
+.git

@@ -1,0 +1,57 @@
+{
+  "name": "@wcm/status",
+  "version": "0.0.1",
+  "description": "Monitor for WCM.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm run lint:eslint",
+    "lint:eslint": "eslint .",
+    "clean:coverage": "rm -Rf ./test/coverage",
+    "pretest": "npm run clean:coverage",
+    "test": "NODE_ENV=test nyc --reporter=html mocha",
+    "posttest": "npm run lint",
+    "open:coverage": "open ./test/coverage/lcov-report/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:hvperdrive/wcm-status-package.git"
+  },
+  "publishConfig": {
+    "@acpaas:registry": "https://nexusrepo.antwerpen.be/repository/npm-private"
+  },
+  "keywords": [
+    "wcm",
+    "status",
+    "monitor"
+  ],
+  "contributors": [
+    "Pieterjan Van Saet <pieterjan.vansaet@studiohyperdrive.be>",
+    "Jeroen Valcke <jeroen.valcke@studiohyperdrive.be>"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "glob": "^7.1.3",
+    "helmet": "^3.13.0",
+    "lodash": "^4.17.11",
+    "q": "^1.5.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@studiohyperdrive/eslint-config": "3.0.2",
+    "chai": "4.0.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-chai-friendly": "0.4.1",
+    "eslint-plugin-import": "^2.14.0",
+    "istanbul": "0.4.5",
+    "mocha": "4.0.1",
+    "mocha-multi": "1.0.1",
+    "nyc": "12.0.2",
+    "supertest": "3.0.0"
+  }
+}
